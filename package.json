@@ -4,7 +4,9 @@
   "description": "> This is the one of Second meeting CSS & HTML challenges -> Fylo Data Storage Site ( you can see a preview in the bottom of the page ).",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "serve": "live-server",
+    "start": "npm-run-all compile:sass serve"
   },
   "author": "yarden",
   "license": "ISC",
@@ -12,6 +14,7 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "npm-run-all": "^4.1.5"
   }
 }

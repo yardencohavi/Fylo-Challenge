@@ -8,55 +8,65 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
   <title>Fylo data storage component</title>
+
 </head>
 
 <body>
   <main>
-
     <div class="left-block">
 
       <img class="logo" src="assets/logo.svg">
 
       <div class="icons-bar">
-        <i>
+        <div>
           <img class="icon" src="assets/icon-document.svg">
-        </i>
-        <i>
+        </div>
+        <div>
           <img class="icon" src="assets/icon-folder.svg">
-        </i>
-        <i>
-          <img class="icon" src="assets/icon-upload.svg">
-        </i>
+        </div>
+        <div>
+          <label>
+            <input type="file" id="file" style="display: none;" accept=".png, .jpg, .jpeg" multiple />
+            <img class="icon" src="assets/icon-upload.svg">
+          </label>
+        </div>
       </div>
     </div>
     <div class="right-block">
       <div class="white-box">
-        <p class="msg">
-          <span class="number">185</span>GB Left
-        </p>
+        <p class="msg" id="left">50 <span class="white-box__note">MB Left</span></p>
         <div class="triangle">
         </div>
       </div>
-      
-      <div class="heading">
-        You’ve used <strong>815 GB</strong> of your storage
+
+      <div class="heading">You’ve used <strong id="use">0</strong> <strong>MB</strong> of your storage</div>
+      <div class="progress-bar">
+        <span class="progress-bar__used" id="bar"></span>
       </div>
-      <label class="switch">
-        <span class="slider"></span>
-      </label>
       <div class="line">
-        <li class="left-side">
-          0 GB
-        </li>
-        <li class="right-side">
-          1000 GB
-        </li>
+        <span>0 MB</span>
+        <span>50 MB</span>
       </div>
     </div>
+    
+   
   </main>
 
-  <img class="img-bottom" src="assets/bg-desktop.png">
+  <table id="list" >
+    <thead>
+      <tr>
+        <td>File Name</td>
+        <td>Size</td>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <script src="script.js"></script>
 </body>
 
 </html>
