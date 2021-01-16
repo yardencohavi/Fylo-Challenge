@@ -1,4 +1,4 @@
-var leftStorage = 50,
+var leftStorage = 10,
     usedStorage = 0;
 var precentage = 0;
 
@@ -25,7 +25,7 @@ inputFile.onchange = function () {
             fileList[nameFile] = sizeFile.toFixed(1);
             usedStorage += sizeFile;
             leftStorage -= sizeFile;
-            precentage += ((sizeFile / 50) * 100);
+            precentage += ((sizeFile / 10) * 100);
         } else
             alert("There is no enough space!");
     };
